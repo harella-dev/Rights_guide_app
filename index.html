@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מדריך הזכויות שלי</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       מסך 1 — דף הבית
+  ══════════════════════════════════════════ -->
+  <section id="screen-home" class="screen">
+    <div class="container">
+      <h1 id="home-app-name"></h1>
+      <p id="home-intro" class="intro-text"></p>
+      <p id="home-no-data" class="no-data-note"></p>
+
+      <div class="button-group">
+        <button class="btn btn-primary" onclick="startFlow()">בואו נתחיל</button>
+        <button class="btn btn-secondary" onclick="showScreen('screen-guides')">מדריכים והסברים</button>
+      </div>
+
+      <footer class="disclaimer" id="home-disclaimer"></footer>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       מסך 2 — שאלה 1: קופת חולים
+  ══════════════════════════════════════════ -->
+  <section id="screen-q1" class="screen hidden">
+    <div class="container">
+      <p class="step-label">שאלה 1 מתוך 3</p>
+      <h2>באיזו קופת חולים אתם חברים?</h2>
+      <div id="q1-buttons" class="choice-group"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       מסך 3 — שאלה 2: תחום עזרה
+  ══════════════════════════════════════════ -->
+  <section id="screen-q2" class="screen hidden">
+    <div class="container">
+      <p class="step-label">שאלה 2 מתוך 3</p>
+      <h2>במה תרצו עזרה?</h2>
+      <div id="q2-buttons" class="choice-group">
+        <button class="btn btn-choice" onclick="selectCategory('fund')">זכויות וכיסויים בקופת החולים</button>
+        <button class="btn btn-choice" onclick="selectCategory('bituach')">קצבאות וזכויות מהביטוח הלאומי</button>
+        <button class="btn btn-choice" onclick="selectCategory('general')">מידע כללי על זכויות</button>
+      </div>
+      <button class="btn btn-back" onclick="showScreen('screen-q1')">← חזרה</button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       מסך 4 — שאלה 3: חיפוש מצב / מחלה
+  ══════════════════════════════════════════ -->
+  <section id="screen-q3" class="screen hidden">
+    <div class="container">
+      <p class="step-label">שאלה 3 מתוך 3</p>
+      <h2>חפשו מצב חיים או מחלה</h2>
+
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="למשל: סרטן, פרקינסון, סוכרת..."
+        autocomplete="off"
+        inputmode="search"
+      />
+
+      <!-- Section A: curated results -->
+      <div id="section-curated" class="search-section hidden">
+        <div class="search-section-header search-section-header-a">
+          <span class="search-section-title">מהמאגר שלנו</span>
+        </div>
+        <div id="curated-results"></div>
+      </div>
+
+      <!-- Section B: live Kol Zchut -->
+      <div id="section-kolzchut" class="search-section hidden">
+        <div class="search-section-header search-section-header-b">
+          <span class="search-section-title">חיפוש חופשי בכל-זכות</span>
+          <span class="search-section-sub">תוצאות מאתר כל-זכות</span>
+        </div>
+        <div id="kolzchut-results"></div>
+      </div>
+
+      <button class="btn btn-back" onclick="showScreen('screen-q2')" style="margin-top:24px">← חזרה</button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       מסך 5 — תוצאות
+  ══════════════════════════════════════════ -->
+  <section id="screen-results" class="screen hidden">
+    <div class="container">
+      <h2>המקורות הרשמיים שמתאימים לכם</h2>
+      <div id="results-cards"></div>
+
+      <div class="button-group">
+        <button class="btn btn-secondary" onclick="showScreen('screen-guides')">מדריכים והסברים</button>
+        <button class="btn btn-back" onclick="restart()">התחילו מחדש</button>
+      </div>
+
+      <footer class="disclaimer" id="results-disclaimer"></footer>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       מסך 6 — מדריכים והסברים
+  ══════════════════════════════════════════ -->
+  <section id="screen-guides" class="screen hidden">
+    <div class="container">
+      <h2>מדריכים והסברים</h2>
+
+      <h3 class="section-heading">מאמרים והסברים</h3>
+      <div id="guides-articles"></div>
+
+      <h3 class="section-heading">מדריכים להורדה</h3>
+      <div id="guides-downloads"></div>
+
+      <button class="btn btn-back" onclick="showScreen('screen-home')">← חזרה לדף הבית</button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       מסך 7 — מאמר פתוח
+  ══════════════════════════════════════════ -->
+  <section id="screen-article" class="screen hidden">
+    <div class="container">
+      <h2 id="article-title"></h2>
+      <div id="article-body"></div>
+      <button class="btn btn-back" onclick="showScreen('screen-guides')">← חזרה למדריכים</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

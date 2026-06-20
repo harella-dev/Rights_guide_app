@@ -1,0 +1,423 @@
+/* ─────────────────────────────────────────────
+   צבעים — שנו כאן בלבד כדי לעצב מחדש
+───────────────────────────────────────────── */
+:root {
+  --color-primary:      #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary:    #f1f5f9;
+  --color-accent:       #0ea5e9;
+  --color-bg:           #f8fafc;
+  --color-card:         #ffffff;
+  --color-text:         #1e293b;
+  --color-muted:        #64748b;
+  --color-border:       #e2e8f0;
+  --color-highlight:    #eff6ff;
+  --color-highlight-border: #2563eb;
+  --radius:             12px;
+  --shadow:             0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ─────────────────────────────────────────────
+   איפוס ובסיס
+───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: Arial, "Arial Hebrew", sans-serif;
+  font-size: 16px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  direction: rtl;
+}
+
+body { min-height: 100vh; }
+
+/* ─────────────────────────────────────────────
+   מסכים
+───────────────────────────────────────────── */
+.screen { display: block; }
+.screen.hidden { display: none; }
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* ─────────────────────────────────────────────
+   טיפוגרפיה
+───────────────────────────────────────────── */
+h1, h2, h3 {
+  font-family: Arial, "Arial Hebrew", sans-serif;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+h3.section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.step-label {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.no-data-note {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin-bottom: 28px;
+}
+
+/* ─────────────────────────────────────────────
+   כפתורים
+───────────────────────────────────────────── */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, transform 0.1s;
+  text-decoration: none;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--color-primary-dark); }
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+.btn-secondary:hover { background: #e2e8f0; }
+
+.btn-choice {
+  background: var(--color-card);
+  color: var(--color-text);
+  border: 1.5px solid var(--color-border);
+  text-align: right;
+  font-weight: 500;
+}
+.btn-choice:hover {
+  border-color: var(--color-primary);
+  background: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+.btn-back {
+  background: transparent;
+  color: var(--color-muted);
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 0;
+  width: auto;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.btn-back:hover { color: var(--color-primary); }
+
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 9px 14px;
+  width: auto;
+  display: inline-block;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.choice-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* ─────────────────────────────────────────────
+   כרטיסיות תוצאות
+───────────────────────────────────────────── */
+.results-group-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 20px 0 8px;
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+}
+
+.card-highlight {
+  background: var(--color-highlight);
+  border-color: var(--color-highlight-border);
+  border-right: 4px solid var(--color-highlight-border);
+}
+
+.card-title {
+  font-size: 0.975rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.card-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.card a.btn {
+  font-size: 0.875rem;
+  padding: 9px 14px;
+}
+
+/* ─────────────────────────────────────────────
+   רשימת מדריכים
+───────────────────────────────────────────── */
+.guide-item {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow);
+}
+
+.guide-item-text { flex: 1; }
+
+.guide-item-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.guide-item-desc {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+.soon-badge {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────
+   מסך מאמר
+───────────────────────────────────────────── */
+#article-body p {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+/* ─────────────────────────────────────────────
+   שדה חיפוש
+───────────────────────────────────────────── */
+.search-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  font-family: Arial, "Arial Hebrew", sans-serif;
+  direction: rtl;
+  background: var(--color-card);
+  color: var(--color-text);
+  margin-bottom: 20px;
+  transition: border-color 0.15s;
+  /* remove default search-cancel button styling on webkit */
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.search-input::placeholder { color: var(--color-muted); }
+
+/* ─────────────────────────────────────────────
+   כותרות שקטי חיפוש
+───────────────────────────────────────────── */
+.search-section { margin-bottom: 8px; }
+
+.search-section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 8px;
+}
+
+.search-section-header-a {
+  background: var(--color-highlight);
+  border-right: 3px solid var(--color-primary);
+}
+
+.search-section-header-b {
+  background: #f0fdf4;
+  border-right: 3px solid #16a34a;
+}
+
+.search-section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.search-section-sub {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+/* ─────────────────────────────────────────────
+   כרטיסי תוצאות מאגר (Section A)
+───────────────────────────────────────────── */
+.curated-card {
+  margin-bottom: 10px;
+}
+
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.source-link {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.source-link:hover { opacity: 0.82; }
+
+.source-link-kz {
+  background: var(--color-highlight);
+  color: var(--color-primary);
+  border: 1px solid #bfdbfe;
+}
+.source-link-btl {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+.source-link-fund {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* ─────────────────────────────────────────────
+   תוצאות כל-זכות (Section B)
+───────────────────────────────────────────── */
+.kz-result-item {
+  display: block;
+  padding: 11px 14px;
+  margin-bottom: 6px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: #15803d;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: background 0.12s, border-color 0.12s;
+}
+.kz-result-item:hover {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+.kz-result-item::before {
+  content: '↗ ';
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+/* helpers */
+.search-empty {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  padding: 10px 4px;
+}
+.search-loading {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  padding: 10px 4px;
+}
+
+/* ─────────────────────────────────────────────
+   כותרת תחתית (דיסקליימר)
+───────────────────────────────────────────── */
+.disclaimer {
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}

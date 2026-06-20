@@ -1,0 +1,225 @@
+{
+  "_readme": "קובץ זה מרכז את כל התוכן והקישורים של האפליקציה במקום אחד. כדי לעדכן: ערכו את הטקסט או את הכתובות (url) בין הגרשיים בלבד. אל תמחקו פסיקים, סוגריים או גרשיים. כדי להוסיף מחלה/מצב חדש — העתיקו בלוק קיים בתוך \"topics\" ושנו את הערכים. כדי להוסיף מדריך להורדה — הוסיפו בלוק ב-\"downloads\" ושימו את קובץ ה-PDF בתיקיית assets.",
+  "_notes": {
+    "newimmigrants_kolzchut": "כתובת העמוד 'עולים חדשים' בכל-זכות הוסקה לפי שם העמוד ולא נפתחה לאימות — מומלץ לפתוח ולוודא לפני העלייה לאוויר.",
+    "clusters": "חלק מהמחלות מפנות לעמוד-אשכול בכל-זכות: 'מחלות ראומטיות' מכסה זאבת, RA, סקלרודרמה, סיוגרן ועוד; 'מחלות נוירולוגיות' הוא עמוד-אב לחלק מהמחלות.",
+    "bituachLeumi": "לביטוח הלאומי אין עמוד נפרד לכל מחלה — הוא מאורגן לפי קצבה. לכן הקישור מפנה לקצבה הרלוונטית (לרוב 'נכות כללית').",
+    "funds": "קופות החולים אינן בנויות לפי מחלה. כברירת מחדל הקישור מפנה לעמוד הזכויות הכללי של הקופה (אצל כללית הוא ניתן לניווט לפי מצב רפואי). אפשר להוסיף ב-'fundOverrides' קישור ספציפי לכל קופה כשקיים עמוד כזה."
+  },
+
+  "meta": {
+    "appName": "מדריך הזכויות שלי",
+    "intro": "המדריך עוזר לכם למצוא במהירות את העמוד הרשמי המתאים לזכויות ולהטבות שמגיעות לכם — בקופת החולים, בביטוח הלאומי ובאתר כל-זכות. עונים על שלוש שאלות קצרות, ומקבלים קישור ישיר לעמוד הנכון.",
+    "noDataNote": "המדריך אינו אוסף ואינו שומר פרטים אישיים.",
+    "disclaimerShort": "המדריך מפנה למקורות רשמיים בלבד. המידע באתר הרשמי הוא הקובע.",
+    "disclaimerFull": "חשוב לדעת: המדריך מפנה למקורות רשמיים בלבד, אינו מספק את המידע הרשמי עצמו ואינו מהווה ייעוץ. הזכויות והתנאים עשויים להשתנות — יש לבדוק תמיד באתר הרשמי המעודכן, שהוא המקור הקובע."
+  },
+
+  "funds": {
+    "maccabi": {
+      "name": "מכבי",
+      "links": [
+        { "label": "מכבי – זכאויות", "desc": "הזכאויות והשירותים שמגיעים לכם כחברי מכבי.", "url": "https://www.maccabi4u.co.il/eligibilities_insuranceplan/eligibilities/" },
+        { "label": "מכבי – תוכניות ביטוח", "desc": "תוכניות הביטוח המשלים של מכבי והכיסויים שבהן.", "url": "https://www.maccabi4u.co.il/eligibilities_insuranceplan/insuranceplan/" }
+      ]
+    },
+    "clalit": {
+      "name": "כללית",
+      "links": [
+        { "label": "כללית – הזכויות שלי", "desc": "דף הזכויות של כללית, מסודר לפי מצב רפואי ושירות.", "url": "https://www.clalit.co.il/he/myrights/Pages/default.aspx" }
+      ]
+    },
+    "meuhedet": {
+      "name": "מאוחדת",
+      "links": [
+        { "label": "מאוחדת – זכויות, שירותים וביטוחים", "desc": "הזכויות, השירותים והביטוחים של קופת חולים מאוחדת.", "url": "https://www.meuhedet.co.il/%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-%D7%95%D7%91%D7%99%D7%98%D7%95%D7%97%D7%99%D7%9D/%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-%D7%95%D7%91%D7%99%D7%98%D7%95%D7%97%D7%99%D7%9D/" }
+      ]
+    },
+    "leumit": {
+      "name": "לאומית",
+      "links": [
+        { "label": "לאומית – זכויות מבוטחים", "desc": "סל הבריאות, ההטבות והזכויות למבוטחי לאומית.", "url": "https://www.leumit.co.il/lobby-rights/" }
+      ]
+    }
+  },
+
+  "fallbacks": {
+    "bituachLeumiGeneral": { "label": "ביטוח לאומי – כל הזכויות", "desc": "מנוע הזכויות הרשמי של המוסד לביטוח לאומי, לפי מצב אישי.", "url": "https://www.btl.gov.il/allrights/Pages/default.aspx" },
+    "kolzchutGeneral": { "label": "כל-זכות – זכויות מהביטוח הלאומי", "desc": "מדריך מפורט לזכויות מול הביטוח הלאומי באתר כל-זכות.", "url": "https://www.kolzchut.org.il/he/%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%9E%D7%94%D7%9E%D7%95%D7%A1%D7%93_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99" }
+  },
+
+  "groups": ["מצב חיים", "אונקולוגיה", "סוכרת ומטבולי", "לב וכלי דם", "מערכת הנשימה", "נוירולוגיה", "אוטואימוני / ראומטי / מעי", "בריאות הנפש", "כליה ודם"],
+
+  "topics": [
+    { "id": "newparents", "group": "מצב חיים", "label": "הורים טריים",
+      "kolzchut": { "label": "כל-זכות – היריון ולידה", "note": "דמי לידה, חופשת לידה, קצבת ילדים וזכויות הורים.", "url": "https://www.kolzchut.org.il/he/%D7%94%D7%99%D7%A8%D7%99%D7%95%D7%9F_%D7%95%D7%9C%D7%99%D7%93%D7%94" },
+      "bituachLeumi": { "label": "ביטוח לאומי – אמהות (מענק ודמי לידה)", "note": "מענק לידה, דמי לידה וזכויות הורים מהביטוח הלאומי.", "url": "https://www.btl.gov.il/benefits/maternity/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "seniors", "group": "מצב חיים", "label": "גיל הזהב",
+      "kolzchut": { "label": "כל-זכות – אזרחים ותיקים (גיל הזהב)", "note": "קצבת אזרח ותיק, הנחות והטבות לגיל השלישי.", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D_%D7%95%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%A8%D7%99%D7%9D_(%D7%92%D7%99%D7%9C_%D7%94%D7%96%D7%94%D7%91)" },
+      "bituachLeumi": { "label": "ביטוח לאומי – אזרח ותיק (קצבת זקנה)", "note": "קצבת אזרח ותיק (זקנה) והטבות נלוות.", "url": "https://www.btl.gov.il/benefits/old_age/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "disability", "group": "מצב חיים", "label": "אנשים עם מוגבלות",
+      "kolzchut": { "label": "כל-זכות – אנשים עם מוגבלויות", "note": "קצבת נכות, נגישות, הנחות וסיוע.", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%99%D7%95%D7%AA" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "קצבת נכות, שירותים מיוחדים, ניידות וזכויות נוספות.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "newimmigrants", "group": "מצב חיים", "label": "עולים חדשים",
+      "kolzchut": { "label": "כל-זכות – עולים חדשים", "note": "סל קליטה, נקודות זיכוי וזכויות עולים. (כתובת לאימות)", "url": "https://www.kolzchut.org.il/he/%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D" },
+      "bituachLeumi": { "label": "ביטוח לאומי – כל הקצבאות", "note": "קצבאות והטבות רלוונטיות לעולים חדשים.", "url": "https://www.btl.gov.il/benefits/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "cancer", "group": "אונקולוגיה", "label": "סרטן",
+      "kolzchut": { "label": "כל-זכות – חולי סרטן", "note": "זכויות חולי סרטן: טיפולים, תרופות, קצבאות וסיוע.", "url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%9C%D7%99_%D7%A1%D7%A8%D7%98%D7%9F" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "diabetes", "group": "סוכרת ומטבולי", "label": "סוכרת",
+      "kolzchut": { "label": "כל-זכות – סוכרת", "note": "זכויות, אביזרים ותרופות לחולי סוכרת.", "url": "https://www.kolzchut.org.il/he/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "diabetes_youth", "group": "סוכרת ומטבולי", "label": "סוכרת נעורים",
+      "kolzchut": { "label": "כל-זכות – סוכרת נעורים", "note": "זכויות והטבות לילדים ובני נוער עם סוכרת.", "url": "https://www.kolzchut.org.il/he/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA_%D7%A0%D7%A2%D7%95%D7%A8%D7%99%D7%9D" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "osteoporosis", "group": "סוכרת ומטבולי", "label": "אוסטאופורוזיס",
+      "kolzchut": { "label": "כל-זכות – אוסטאופורוזיס", "note": "זכויות והטבות בנושא דלדול עצם.", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%95%D7%A1%D7%98%D7%90%D7%95%D7%A4%D7%95%D7%A8%D7%95%D7%96%D7%99%D7%A1_(%D7%93%D7%9C%D7%93%D7%95%D7%9C_%D7%94%D7%A2%D7%A6%D7%9D)" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "heart", "group": "לב וכלי דם", "label": "מחלות לב",
+      "kolzchut": { "label": "כל-זכות – חולי לב", "note": "זכויות חולי לב וכלי דם.", "url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%9C%D7%99_%D7%9C%D7%91" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "stroke", "group": "לב וכלי דם", "label": "אירוע מוחי (שבץ)",
+      "kolzchut": { "label": "כל-זכות – אירוע מוחי (שבץ)", "note": "זכויות, שיקום וסיוע לאחר אירוע מוחי.", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%99%D7%A8%D7%95%D7%A2_%D7%9E%D7%95%D7%97%D7%99_(%D7%A9%D7%91%D7%A5_%D7%9E%D7%95%D7%97%D7%99,_CVA)" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "pah", "group": "לב וכלי דם", "label": "יתר לחץ דם ריאתי",
+      "kolzchut": { "label": "כל-זכות – יתר לחץ דם ריאתי", "note": "זכויות והטבות בנושא יתר לחץ דם ריאתי.", "url": "https://www.kolzchut.org.il/he/%D7%99%D7%AA%D7%A8_%D7%9C%D7%97%D7%A5_%D7%93%D7%9D_%D7%A8%D7%99%D7%90%D7%AA%D7%99" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "asthma", "group": "מערכת הנשימה", "label": "אסתמה",
+      "kolzchut": { "label": "כל-זכות – אסתמה", "note": "זכויות והטבות בנושא אסתמה (גנחת הסימפונות).", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%A1%D7%AA%D7%9E%D7%94_(%D7%92%D7%A0%D7%97%D7%AA_%D7%94%D7%A1%D7%99%D7%9E%D7%A4%D7%95%D7%A0%D7%95%D7%AA)" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "cf", "group": "מערכת הנשימה", "label": "סיסטיק פיברוזיס (CF)",
+      "kolzchut": { "label": "כל-זכות – סיסטיק פיברוזיס (CF)", "note": "זכויות והטבות בנושא סיסטיק פיברוזיס.", "url": "https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%A1%D7%98%D7%99%D7%A7_%D7%A4%D7%99%D7%91%D7%A8%D7%95%D7%96%D7%99%D7%A1_(CF)" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "neuro", "group": "נוירולוגיה", "label": "מחלות נוירולוגיות (כללי)",
+      "kolzchut": { "label": "כל-זכות – מחלות נוירולוגיות", "note": "עמוד-אב לזכויות בתחום המחלות הנוירולוגיות.", "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%A0%D7%95%D7%99%D7%A8%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%95%D7%AA" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "parkinson", "group": "נוירולוגיה", "label": "פרקינסון",
+      "kolzchut": { "label": "כל-זכות – פרקינסון", "note": "זכויות והטבות בנושא פרקינסון.", "url": "https://www.kolzchut.org.il/he/%D7%A4%D7%A8%D7%A7%D7%99%D7%A0%D7%A1%D7%95%D7%9F" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "ms", "group": "נוירולוגיה", "label": "טרשת נפוצה",
+      "kolzchut": { "label": "כל-זכות – טרשת נפוצה", "note": "זכויות והטבות בנושא טרשת נפוצה.", "url": "https://www.kolzchut.org.il/he/%D7%98%D7%A8%D7%A9%D7%AA_%D7%A0%D7%A4%D7%95%D7%A6%D7%94" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "epilepsy", "group": "נוירולוגיה", "label": "אפילפסיה",
+      "kolzchut": { "label": "כל-זכות – אפילפסיה", "note": "זכויות והטבות בנושא אפילפסיה.", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%A4%D7%99%D7%9C%D7%A4%D7%A1%D7%99%D7%94" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "als", "group": "נוירולוגיה", "label": "ALS – ניוון שרירים",
+      "kolzchut": { "label": "כל-זכות – ALS (ניוון שרירים)", "note": "זכויות והטבות בנושא ALS.", "url": "https://www.kolzchut.org.il/he/%D7%A0%D7%99%D7%95%D7%95%D7%9F_%D7%A9%D7%A8%D7%99%D7%A8%D7%99%D7%9D_-_ALS" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "alzheimer", "group": "נוירולוגיה", "label": "אלצהיימר / דמנציה",
+      "kolzchut": { "label": "כל-זכות – אלצהיימר ודמנציה", "note": "זכויות והטבות בנושא אלצהיימר ומחלות דמנציה.", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%9C%D7%A6%D7%94%D7%99%D7%99%D7%9E%D7%A8_%D7%95%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%93%D7%9E%D7%A0%D7%A6%D7%99%D7%94" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "rheumatic", "group": "אוטואימוני / ראומטי / מעי", "label": "מחלות ראומטיות (זאבת, RA ועוד)",
+      "kolzchut": { "label": "כל-זכות – מחלות ראומטיות", "note": "עמוד-אשכול: זאבת, RA, סקלרודרמה, סיוגרן ועוד.", "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%95%D7%AA" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "crohn", "group": "אוטואימוני / ראומטי / מעי", "label": "קרוהן",
+      "kolzchut": { "label": "כל-זכות – קרוהן", "note": "זכויות והטבות בנושא מחלת קרוהן.", "url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%95%D7%94%D7%9F" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "colitis", "group": "אוטואימוני / ראומטי / מעי", "label": "קוליטיס כיבית",
+      "kolzchut": { "label": "כל-זכות – קוליטיס כיבית", "note": "זכויות והטבות בנושא קוליטיס כיבית.", "url": "https://www.kolzchut.org.il/he/%D7%A7%D7%95%D7%9C%D7%99%D7%98%D7%99%D7%A1_%D7%9B%D7%99%D7%91%D7%99%D7%AA" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "psoriasis", "group": "אוטואימוני / ראומטי / מעי", "label": "פסוריאזיס",
+      "kolzchut": { "label": "כל-זכות – פסוריאזיס", "note": "זכויות והטבות בנושא פסוריאזיס.", "url": "https://www.kolzchut.org.il/he/%D7%A4%D7%A1%D7%95%D7%A8%D7%99%D7%90%D7%96%D7%99%D7%A1" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "celiac", "group": "אוטואימוני / ראומטי / מעי", "label": "צליאק",
+      "kolzchut": { "label": "כל-זכות – צליאק", "note": "זכויות והטבות בנושא צליאק.", "url": "https://www.kolzchut.org.il/he/%D7%A6%D7%9C%D7%99%D7%90%D7%A7" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "mental", "group": "בריאות הנפש", "label": "בריאות הנפש (כללי)",
+      "kolzchut": { "label": "כל-זכות – מתמודדי נפש", "note": "זכויות וטיפולים בתחום בריאות הנפש.", "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%AA%D7%9E%D7%95%D7%93%D7%93%D7%99_%D7%A0%D7%A4%D7%A9" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "depression", "group": "בריאות הנפש", "label": "דיכאון",
+      "kolzchut": { "label": "כל-זכות – דיכאון", "note": "זכויות והטבות בנושא דיכאון.", "url": "https://www.kolzchut.org.il/he/%D7%93%D7%99%D7%9B%D7%90%D7%95%D7%9F" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "ptsd", "group": "בריאות הנפש", "label": "PTSD",
+      "kolzchut": { "label": "כל-זכות – PTSD", "note": "זכויות והטבות בנושא הפרעת דחק פוסט-טראומטית.", "url": "https://www.kolzchut.org.il/he/%D7%94%D7%A4%D7%A8%D7%A2%D7%AA_%D7%93%D7%97%D7%A7_%D7%A4%D7%95%D7%A1%D7%98_%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%AA%D7%99%D7%AA_(PTSD)" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "kidney", "group": "כליה ודם", "label": "מחלות כליה ודיאליזה",
+      "kolzchut": { "label": "כל-זכות – מחלות כליה ודיאליזה", "note": "זכויות והטבות בנושא מחלות כליה וטיפולי דיאליזה.", "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%9B%D7%9C%D7%99%D7%94_%D7%95%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99_%D7%93%D7%99%D7%90%D7%9C%D7%99%D7%96%D7%94" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} },
+
+    { "id": "hemophilia", "group": "כליה ודם", "label": "המופיליה",
+      "kolzchut": { "label": "כל-זכות – המופיליה", "note": "זכויות והטבות בנושא המופיליה.", "url": "https://www.kolzchut.org.il/he/%D7%94%D7%9E%D7%95%D7%A4%D7%99%D7%9C%D7%99%D7%94" },
+      "bituachLeumi": { "label": "ביטוח לאומי – נכות כללית", "note": "הקצבה הרלוונטית מהביטוח הלאומי למצב בריאותי שפוגע ביכולת העבודה.", "url": "https://www.btl.gov.il/benefits/Disability/Pages/default.aspx" },
+      "fundOverrides": {} }
+  ],
+
+  "articles": [
+    { "id": "a1", "title": "איך מגישים תביעת נכות לביטוח לאומי — שלב אחר שלב",
+      "body": [
+        "תביעת נכות כללית מתחילה באיסוף המסמכים הרפואיים הרלוונטיים: סיכומי אבחון, מכתבי רופאים ותוצאות בדיקות.",
+        "בשלב הבא ממלאים את טופס התביעה ומגישים אותו לסניף הביטוח הלאומי או באופן מקוון.",
+        "לאחר ההגשה תזומנו לוועדה רפואית שתקבע את אחוזי הנכות ואת הזכאות לקצבה. אפשר להיעזר חינם במרכזי 'יד מכוונת'."
+      ] },
+    { "id": "a2", "title": "סל הבריאות מול הביטוח המשלים — מה ההבדל?",
+      "body": [
+        "סל הבריאות הוא רשימת השירותים שכל תושב זכאי לקבל מקופת החולים על פי חוק.",
+        "הביטוח המשלים הוא תוכנית בתשלום נוסף שמרחיבה את הכיסוי ומוסיפה שירותים שאינם בסל.",
+        "לפני שמבקשים שירות כדאי לבדוק מה כלול בכל אחד מהם, כדי לדעת מה מגיע לכם ומה העלות הצפויה."
+      ] },
+    { "id": "a3", "title": "מעבר בין קופות חולים בלי לאבד זכויות",
+      "body": [
+        "אפשר לעבור בין קופות החולים כמה פעמים בשנה, והקופה החדשה אינה רשאית לסרב לקבל אתכם.",
+        "כדי לשמור על רצף זכויות בביטוח המשלים ובסיעודי, מומלץ להוציא אישור ותק מהקופה הקודמת.",
+        "כדאי לבדוק מראש כיצד המעבר משפיע על תקופות המתנה וכיסויים קיימים."
+      ] }
+  ],
+
+  "downloads": [
+    { "id": "g1", "title": "מדריך הזכויות המלא לחולה כרוני", "desc": "סקירה מקיפה של הזכויות, הקצבאות והשירותים — להורדה ושמירה.", "file": "assets/guide-chronic.pdf" },
+    { "id": "g2", "title": "צ'ק-ליסט: מסמכים לתביעת נכות", "desc": "רשימת המסמכים שכדאי להכין מראש לפני הגשת תביעה.", "file": "assets/checklist-disability.pdf" }
+  ]
+}
