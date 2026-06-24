@@ -1,141 +1,319 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>מדריך הזכויות שלי</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>עוגן — פורטל זכויות, הטבות ומידע לגיל הזהב</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Gveret+Levin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; font-family: Heebo, sans-serif; color: #162B4B; }
+  .hidden { display: none !important; }
+  .cat-card {
+    position: relative; display: flex; align-items: center; gap: 16px;
+    padding: 20px 22px; background: #D9D9D9; border-radius: 12px;
+    overflow: hidden; cursor: pointer;
+    transition: transform .12s, box-shadow .15s; border: none; width: 100%; text-align: right;
+  }
+  .cat-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(22,43,75,.15); }
+  .link-card {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    padding: 18px 20px; background: #D9D9D9; border-radius: 12px;
+    text-decoration: none; transition: transform .12s, box-shadow .15s;
+  }
+  .link-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(22,43,75,.15); }
+  .hmo-card {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 14px 16px; background: #D9D9D9; border-radius: 10px;
+    text-decoration: none; transition: transform .12s, box-shadow .15s;
+  }
+  .hmo-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(22,43,75,.15); }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #D9D9D9; border: none; border-radius: 999px;
+    padding: 11px 22px; cursor: pointer;
+    font-family: Heebo; font-weight: 700; font-size: 16px; color: #162B4B;
+    margin-bottom: 26px; transition: background .15s;
+  }
+  .back-btn:hover { background: #c8c8c8; }
+  .contact-btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: Heebo; font-weight: 700; font-size: 17px; color: #162B4B;
+    text-decoration: none; background: #D9D9D9; border-radius: 999px;
+    padding: 12px 26px; transition: background .15s;
+  }
+  .contact-btn:hover { background: #c8c8c8; }
+  .ms { font-family: 'Material Symbols Outlined'; font-feature-settings: 'liga'; line-height: 1; }
+</style>
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       מסך 1 — דף הבית
-  ══════════════════════════════════════════ -->
-  <section id="screen-home" class="screen">
-    <div class="container">
-      <h1 id="home-app-name"></h1>
-      <p id="home-intro" class="intro-text"></p>
-      <p id="home-no-data" class="no-data-note"></p>
+<!-- HEADER -->
+<header style="border-bottom:1px solid #E5E5E5; position:sticky; top:0; z-index:10; background:#fff;">
+  <div style="max-width:820px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+    <span class="ms" style="font-size:30px; color:#FF2F92;">volunteer_activism</span>
+    <span style="font-family:Heebo; font-weight:800; font-size:26px; color:#162B4B; letter-spacing:-0.01em;">עוגן</span>
+    <span style="width:1px; height:22px; background:#D9D9D9; display:block; flex:none;"></span>
+    <span style="font-family:Heebo; font-weight:500; font-size:15px; color:#555; line-height:1.3;">העוגן שלך למידע שימושי בגיל הזהב</span>
+  </div>
+</header>
 
-      <div class="button-group">
-        <button class="btn btn-primary" onclick="startFlow()">בואו נתחיל</button>
-        <button class="btn btn-secondary" onclick="showScreen('screen-guides')">מדריכים והסברים</button>
+<!-- HOME VIEW -->
+<div id="homeView">
+
+  <section style="max-width:820px; margin:0 auto; padding:44px 24px 8px; text-align:right;">
+    <div style="display:flex; align-items:center; gap:13px; justify-content:flex-start; margin-bottom:20px;">
+      <span style="font-family:Heebo; font-weight:700; font-size:16px; letter-spacing:0.01em; color:#FF2F92;">פורטל זכויות, הטבות ומידע</span>
+    </div>
+    <div style="margin-bottom:28px;">
+      <h1 style="font-family:Heebo; font-weight:800; font-size:clamp(28px,5vw,42px); line-height:1.1; color:#162B4B; margin:0; letter-spacing:-0.015em;">כמעט כל המידע שצריך בגיל הזהב</h1>
+      <p style="font-family:'Gveret Levin', cursive; font-size:clamp(26px,4vw,38px); color:#0096FF; margin:0; line-height:1.2; display:inline-block; margin-top:-4px;">במקום אחד</p>
+    </div>
+    <div style="background:#F5F5F5; border-radius:14px; padding:26px 28px;">
+      <p style="font-family:Heebo; font-weight:500; font-size:19px; line-height:1.75; color:#162B4B; margin:0; text-align:right;">כשמתמודדים עם מצב רפואי, קל להרגיש מוצפים ממידע, טפסים והחלטות. פורטל עוגן נועד להיות נקודת אחיזה פשוטה וברורה בדרך. כאן אפשר למצוא קישורים רשמיים, עדכניים ושימושיים למידע שחשוב להכיר, כדי לקבל תמונה ברורה יותר של האפשרויות העומדות על הפרק. כל מה שצריך לעשות הוא לבחור את הנושא המבוקש, להקליק עליו ולהגיע לאתרים הרלוונטיים — בלי חיפושים מיותרים ובלי ללכת לאיבוד בדרך.</p>
+    </div>
+  </section>
+
+  <section style="max-width:820px; margin:0 auto; padding:36px 24px 8px;">
+    <div id="catGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:12px;"></div>
+  </section>
+
+  <!-- HMO section -->
+  <section style="max-width:820px; margin:0 auto; padding:32px 24px 8px;">
+    <div style="position:relative; border-radius:14px; background:#F5F5F5; border:1px solid #E5E5E5; padding:26px 28px; overflow:hidden;">
+      <span style="position:absolute; top:0; bottom:0; right:0; width:5px; background:#FF2F92; display:block;"></span>
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px; justify-content:flex-end;">
+        <span style="flex:1; font-family:Heebo; font-weight:800; font-size:22px; color:#162B4B; line-height:1.25; letter-spacing:-0.01em; text-align:right;">זכויות ושירותים לגיל הזהב בקופ״ח</span>
+        <span class="ms" style="font-size:30px; color:#FF2F92; min-width:32px; text-align:center;">health_and_safety</span>
       </div>
-
-      <footer class="disclaimer" id="home-disclaimer"></footer>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       מסך 2 — שאלה 1: קופת חולים
-  ══════════════════════════════════════════ -->
-  <section id="screen-q1" class="screen hidden">
-    <div class="container">
-      <p class="step-label">שאלה 1 מתוך 3</p>
-      <h2>באיזו קופת חולים אתם חברים?</h2>
-      <div id="q1-buttons" class="choice-group"></div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       מסך 3 — שאלה 2: תחום עזרה
-  ══════════════════════════════════════════ -->
-  <section id="screen-q2" class="screen hidden">
-    <div class="container">
-      <p class="step-label">שאלה 2 מתוך 3</p>
-      <h2>במה תרצו עזרה?</h2>
-      <div id="q2-buttons" class="choice-group">
-        <button class="btn btn-choice" onclick="selectCategory('fund')">זכויות וכיסויים בקופת החולים</button>
-        <button class="btn btn-choice" onclick="selectCategory('bituach')">קצבאות וזכויות מהביטוח הלאומי</button>
-        <button class="btn btn-choice" onclick="selectCategory('general')">מידע כללי על זכויות</button>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;">
+        <a href="https://www.clalit.co.il/he/myrights/senior/Pages/default.aspx" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">כללית</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://www.leumit.co.il/65plus/" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">לאומית</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://www.meuhedet.co.il/%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D/" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">מאוחדת</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://www.maccabi4u.co.il/maccabi_circles/elderly/" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">מכבי</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
       </div>
-      <button class="btn btn-back" onclick="showScreen('screen-q1')">← חזרה</button>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════
-       מסך 4 — שאלה 3: חיפוש מצב / מחלה
-  ══════════════════════════════════════════ -->
-  <section id="screen-q3" class="screen hidden">
-    <div class="container">
-      <p class="step-label">שאלה 3 מתוך 3</p>
-      <h2>חפשו מצב חיים או מחלה</h2>
-
-      <input
-        type="search"
-        id="search-input"
-        class="search-input"
-        placeholder="למשל: סרטן, פרקינסון, סוכרת..."
-        autocomplete="off"
-        inputmode="search"
-      />
-
-      <!-- Section A: curated results -->
-      <div id="section-curated" class="search-section hidden">
-        <div class="search-section-header search-section-header-a">
-          <span class="search-section-title">מהמאגר שלנו</span>
-        </div>
-        <div id="curated-results"></div>
+  <!-- Telemedicine section -->
+  <section style="max-width:820px; margin:0 auto; padding:20px 24px 8px;">
+    <div style="position:relative; border-radius:14px; background:#F5F5F5; border:1px solid #E5E5E5; padding:26px 28px; overflow:hidden;">
+      <span style="position:absolute; top:0; bottom:0; right:0; width:5px; background:#FF2F92; display:block;"></span>
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px; justify-content:flex-end;">
+        <span style="flex:1; font-family:Heebo; font-weight:800; font-size:22px; color:#162B4B; line-height:1.25; letter-spacing:-0.01em; text-align:right;">שירותי רפואה בלי לצאת מהבית</span>
+        <span class="ms" style="font-size:30px; color:#FF2F92; min-width:32px; text-align:center;">home_health</span>
       </div>
-
-      <!-- Section B: live Kol Zchut -->
-      <div id="section-kolzchut" class="search-section hidden">
-        <div class="search-section-header search-section-header-b">
-          <span class="search-section-title">חיפוש חופשי בכל-זכות</span>
-          <span class="search-section-sub">תוצאות מאתר כל-זכות</span>
-        </div>
-        <div id="kolzchut-results"></div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;">
+        <a href="https://www.tasmc.org.il/service-info/service-info/telemedicine/" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">איכילוב</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://assuta.co.il/media/channels/article-channel/without_leaving_home/" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">אסותא</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://hospitals.clalit.co.il/rabin/bnext/Pages/default.aspx" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">בילינסון</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://www.bikurofe.co.il/visit_home/" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">ביקור רופא</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://hymc.org.il/?CategoryID=2620" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">הלל יפה</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
+        <a href="https://www.sheba.co.il/beyond" target="_blank" rel="noopener" class="hmo-card">
+          <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">שיבא</span>
+          <span class="ms" style="font-size:18px; color:#FF2F92;">open_in_new</span>
+        </a>
       </div>
-
-      <button class="btn btn-back" onclick="showScreen('screen-q2')" style="margin-top:24px">← חזרה</button>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════
-       מסך 5 — תוצאות
-  ══════════════════════════════════════════ -->
-  <section id="screen-results" class="screen hidden">
-    <div class="container">
-      <h2>המקורות הרשמיים שמתאימים לכם</h2>
-      <div id="results-cards"></div>
+</div><!-- /homeView -->
 
-      <div class="button-group">
-        <button class="btn btn-secondary" onclick="showScreen('screen-guides')">מדריכים והסברים</button>
-        <button class="btn btn-back" onclick="restart()">התחילו מחדש</button>
-      </div>
-
-      <footer class="disclaimer" id="results-disclaimer"></footer>
+<!-- DETAIL VIEW -->
+<div id="detailView" class="hidden">
+  <section style="max-width:820px; margin:0 auto; padding:28px 24px 12px;">
+    <button type="button" id="backBtn" class="back-btn">
+      <span class="ms" style="font-size:20px; color:#FF2F92;">chevron_right</span>
+      חזרה לדף הבית
+    </button>
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+      <span class="ms" id="detailIcon" style="font-size:38px; color:#FF2F92;"></span>
+      <h2 id="detailLabel" style="font-family:Heebo; font-weight:800; font-size:clamp(24px,4vw,34px); color:#162B4B; margin:0; letter-spacing:-0.01em;"></h2>
     </div>
+    <p style="font-family:Heebo; font-weight:500; font-size:16px; color:#FF2F92; margin:0 0 24px; text-align:right;">לחיצה על הנושא המבוקש תוביל לקישור הרלוונטי</p>
+    <div id="linkGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:10px;"></div>
   </section>
+</div>
 
-  <!-- ══════════════════════════════════════════
-       מסך 6 — מדריכים והסברים
-  ══════════════════════════════════════════ -->
-  <section id="screen-guides" class="screen hidden">
-    <div class="container">
-      <h2>מדריכים והסברים</h2>
-
-      <h3 class="section-heading">מאמרים והסברים</h3>
-      <div id="guides-articles"></div>
-
-      <h3 class="section-heading">מדריכים להורדה</h3>
-      <div id="guides-downloads"></div>
-
-      <button class="btn btn-back" onclick="showScreen('screen-home')">← חזרה לדף הבית</button>
+<!-- FOOTER -->
+<footer style="border-top:1px solid #E5E5E5; margin-top:52px;">
+  <div style="max-width:820px; margin:0 auto; padding:40px 24px; text-align:center;">
+    <p style="font-family:Heebo; font-weight:500; font-size:16px; color:#555; margin:0 0 16px;">מוגש באהבה כשירות לכל אדם בישראל שמחפש מידע שימושי שיכול לעזור בגיל הזהב</p>
+    <div style="margin-bottom:20px;">
+      <a href="mailto:info@harella.com" class="contact-btn">
+        <span class="ms" style="font-size:20px; color:#FF2F92;">mail</span>
+        יצירת קשר
+      </a>
     </div>
-  </section>
+    <p style="font-family:Heebo; font-weight:400; font-size:14px; color:#888; margin:0;">© כל הזכויות שמורות להראלה הלוי 2026</p>
+  </div>
+</footer>
 
-  <!-- ══════════════════════════════════════════
-       מסך 7 — מאמר פתוח
-  ══════════════════════════════════════════ -->
-  <section id="screen-article" class="screen hidden">
-    <div class="container">
-      <h2 id="article-title"></h2>
-      <div id="article-body"></div>
-      <button class="btn btn-back" onclick="showScreen('screen-guides')">← חזרה למדריכים</button>
-    </div>
-  </section>
+<script>
+const CATEGORIES = [
+  { key: 'hospitalization', icon: 'festival', label: 'לקראת אשפוז', links: [
+    { label: 'מתי מתאים להתאשפז בבית', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/home-hospitalization/when-to-choose/' },
+    { label: 'איך בוחרים בית חולים', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/hospitals/choosing-a-hospital/' },
+    { label: 'חיפוש מוסד סיעודי', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/nursing-hospitalization/nursing-facility-finder/' },
+    { label: 'מימון פינוי עלויות באמבולנס', url: 'https://www.kolzchut.org.il/he/%D7%9E%D7%99%D7%9E%D7%95%D7%9F_%D7%A2%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%A4%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%90%D7%9E%D7%91%D7%95%D7%9C%D7%A0%D7%A1' },
+    { label: 'עצות למניעת טעויות — תרופות', url: 'https://www.gov.il/he/pages/safety-advices' },
+    { label: 'עצות למניעת טעויות — אשפוז בבית חולים', url: 'https://www.gov.il/he/pages/safety-advices?chapterIndex=2' },
+    { label: 'עצות למניעת טעויות — לקראת ניתוח', url: 'https://www.gov.il/he/pages/safety-advices?chapterIndex=3' },
+    { label: 'חוות דעת נוספת', url: 'https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%95%D7%AA_%D7%93%D7%A2%D7%AA_%D7%A8%D7%A4%D7%95%D7%90%D7%99%D7%AA_%D7%A0%D7%95%D7%A1%D7%A4%D7%AA' },
+    { label: 'ייפוי כוח לטיפול רפואי', url: 'https://www.kolzchut.org.il/he/%D7%99%D7%99%D7%A4%D7%95%D7%99_%D7%9B%D7%95%D7%97_%D7%9C%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%A8%D7%A4%D7%95%D7%90%D7%99' },
+    { label: 'מינוי אפוטרופוס לענייני גוף המטופל', url: 'https://www.kolzchut.org.il/he/%D7%9E%D7%99%D7%A0%D7%95%D7%99_%D7%90%D7%A4%D7%95%D7%98%D7%A8%D7%95%D7%A4%D7%95%D7%A1_%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%A0%D7%99_%D7%92%D7%95%D7%A3_%D7%9C%D7%9E%D7%98%D7%95%D7%A4%D7%9C' },
+    { label: 'מינוי מקבל החלטות זמני לעניינים רפואיים', url: 'https://www.kolzchut.org.il/he/%D7%9E%D7%99%D7%A0%D7%95%D7%99_%D7%9E%D7%A7%D7%91%D7%9C_%D7%94%D7%97%D7%9C%D7%98%D7%95%D7%AA_%D7%96%D7%9E%D7%A0%D7%99_%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%9F_%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%9D_%D7%A8%D7%A4%D7%95%D7%90%D7%99%D7%99%D7%9D' },
+    { label: 'מימון הוצאות נסיעה לבית החולים', url: 'https://www.kolzchut.org.il/he/%D7%9E%D7%99%D7%9E%D7%95%D7%9F_%D7%94%D7%95%D7%A6%D7%90%D7%95%D7%AA_%D7%A0%D7%A1%D7%99%D7%A2%D7%94_%D7%9C%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%9D_%D7%A8%D7%A4%D7%95%D7%90%D7%99%D7%99%D7%9D' },
+    { label: 'גמלת סיעוד בזמן אשפוז', url: 'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%A1%D7%99%D7%A2%D7%95%D7%93_%D7%91%D7%96%D7%9E%D7%9F_%D7%90%D7%A9%D7%A4%D7%95%D7%96_%D7%91%D7%91%D7%99%D7%AA_%D7%97%D7%95%D7%9C%D7%99%D7%9D' },
+    { label: 'שיקום בעת אשפוז', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%91%D7%9E%D7%A1%D7%92%D7%A8%D7%AA_%D7%90%D7%A9%D7%A4%D7%95%D7%96_%D7%9C%D7%97%D7%95%D7%9C%D7%94_%D7%A9%D7%99%D7%A7%D7%95%D7%9E%D7%99' },
+  ]},
+  { key: 'discharge', icon: 'door_open', label: 'שחרור מאשפוז', links: [
+    { label: 'שיקום בקהילה או בבית', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%91%D7%A7%D7%94%D7%99%D7%9C%D7%94_%D7%90%D7%95_%D7%91%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%95%D7%9C%D7%94_%D7%A9%D7%99%D7%A7%D7%95%D7%9E%D7%99' },
+    { label: 'סיוע בהתאמת תנאי דיור לאנשים מוגבלים בניידות', url: 'https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%95%D7%A2_%D7%91%D7%94%D7%AA%D7%90%D7%9E%D7%AA_%D7%AA%D7%A0%D7%90%D7%99_%D7%93%D7%99%D7%95%D7%A8_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%94%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%99%D7%9D_%D7%91%D7%A0%D7%99%D7%99%D7%93%D7%95%D7%AA' },
+    { label: 'השאלת ציוד רפואי', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%A9%D7%90%D7%9C%D7%AA_%D7%A6%D7%99%D7%95%D7%93_%D7%A8%D7%A4%D7%95%D7%90%D7%99_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%95%D7%9C%D7%A7%D7%A9%D7%99%D7%A9%D7%99%D7%9D' },
+    { label: 'מכשירי שיקום וניידות דרך קופ״ח', url: 'https://me.health.gov.il/older-adult/services-rights/benefits-and-eligibilities/mobility-and-rehab-aids/' },
+    { label: 'הנשמה ביתית', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%A9%D7%9E%D7%94_%D7%91%D7%99%D7%AA%D7%99%D7%AA_(%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%A0%D7%A9%D7%99%D7%9E%D7%AA%D7%99_%D7%91%D7%99%D7%AA%D7%99)' },
+    { label: 'טיפול ביתי תומך (פליאטיבי)', url: 'https://www.kolzchut.org.il/he/%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%91%D7%99%D7%AA%D7%99_%D7%AA%D7%95%D7%9E%D7%9A_(%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%A4%D7%9C%D7%99%D7%90%D7%98%D7%99%D7%91%D7%99)' },
+    { label: 'שיקום רפואי לקשישים', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%A8%D7%A4%D7%95%D7%90%D7%99_%D7%9C%D7%A7%D7%A9%D7%99%D7%A9%D7%99%D7%9D' },
+  ]},
+  { key: 'rights', icon: 'gavel', label: 'זכויות בריאותיות וסיעוד', links: [
+    { label: 'מיצוי זכויות עבור מצבים שונים', url: 'https://www.kolsherut.org.il/health/understand_government_programs' },
+    { label: 'נותני שירותים בסיעוד לפי יישוב', url: 'https://www.btl.gov.il/Simulators/SiudCalculators/Pages/IturNotneySherutim.aspx' },
+    { label: 'תנאי זכאות לגמלת סיעוד', url: 'https://www.btl.gov.il/benefits/Long_Term_Care/Pages/zakaut.aspx' },
+    { label: 'תהליך קבלת גמלת סיעוד', url: 'https://www.btl.gov.il/BENEFITS/LONG_TERM_CARE/Pages/default.aspx' },
+  ]},
+  { key: 'neuro', icon: 'psychology', label: 'מחלות נוירולוגיות וקוגניטיביות', links: [
+    { label: 'מחלות נוירולוגיות', url: 'https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%A0%D7%95%D7%99%D7%A8%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%95%D7%AA' },
+    { label: 'אירוע מוחי / שבץ מוחי', url: 'https://www.kolzchut.org.il/he/%D7%90%D7%99%D7%A8%D7%95%D7%A2_%D7%9E%D7%95%D7%97%D7%99_(%D7%A9%D7%91%D7%A5_%D7%9E%D7%95%D7%97%D7%99,_CVA)' },
+    { label: 'אבחון דמנציה ואלצהיימר', url: 'https://me.health.gov.il/older-adult/keep-me-healthy/common-conditions/dementia-and-alzheimer/diagnosis/diagnosis/' },
+    { label: 'זכויות במקרה של דמנציה', url: 'https://www.kolzchut.org.il/he/%D7%90%D7%9C%D7%A6%D7%94%D7%99%D7%99%D7%9E%D7%A8_%D7%95%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%93%D7%9E%D7%A0%D7%A6%D7%99%D7%94' },
+  ]},
+  { key: 'meds', icon: 'medication', label: 'תרופות', links: [
+    { label: 'נטילת תרופות בצום', url: 'https://www.gov.il/he/pages/medications-while-fasting' },
+    { label: 'בירור מלאי תרופות בבית מרקחת', url: 'https://www.gov.il/he/pages/drug-inventory-pharmacy' },
+    { label: '״חברים לרפואה״ — עמותה להנגשת תרופות', url: 'https://www.haverim.org.il/' },
+    { label: 'מאגר עלוני תרופות', url: 'https://israeldrugs.health.gov.il/#!/byDrug' },
+    { label: 'הזמנת תרופות הביתה לפי קופה', url: 'https://call.gov.il/product-page/10056613' },
+    { label: 'זכויות הזמנת תרופות הביתה', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%96%D7%9E%D7%A0%D7%AA_%D7%95%D7%9E%D7%A9%D7%9C%D7%95%D7%97_%D7%AA%D7%A8%D7%95%D7%A4%D7%95%D7%AA_%D7%A2%D7%93_%D7%94%D7%91%D7%99%D7%AA_%D7%9E%D7%A7%D7%95%D7%A4%D7%95%D7%AA_%D7%94%D7%97%D7%95%D7%9C%D7%99' },
+  ]},
+  { key: 'benefits', icon: 'payments', label: 'זכויות, קצבאות והטבות', links: [
+    { label: 'קצבת זקנה', url: 'https://www.btl.gov.il/benefits/old_age/Pages/default.aspx' },
+    { label: 'קצבת שאירים', url: 'https://www.btl.gov.il/benefits/survivors_%20insurance/pages/default.aspx' },
+    { label: 'הנחות בארנונה', url: 'https://www.gov.il/he/pages/tax?chapterindex=2' },
+    { label: 'תו חניה', url: 'https://www.gov.il/he/service/disability_parking_badge' },
+    { label: 'תג נכה', url: 'https://me.health.gov.il/older-adult/services-rights/benefits-and-eligibilities/disabled-parking-placard/' },
+    { label: 'בקשה לקביעת מוגבלות בניידות', url: 'https://govforms.gov.il/mw/forms/MobilityCommittee@health.gov.il?gbxid=1' },
+    { label: 'מימון מכשירי שמיעה', url: 'https://me.health.gov.il/older-adult/services-rights/benefits-and-eligibilities/hearing-aids/' },
+    { label: 'הנחות בטיפולי שיניים', url: 'https://me.health.gov.il/older-adult/services-rights/benefits-and-eligibilities/dental-discounts/' },
+    { label: 'הטבות והנחות במיסים', url: 'https://www.gov.il/he/pages/benefits_shvyon?chapterIndex=9' },
+    { label: 'הנחות בתחבורה ציבורית', url: 'https://pti.org.il/zedek-t/#profile-eldery' },
+    { label: 'זכויות ניצולי שואה', url: 'https://www.gov.il/he/departments/holocaust-survivors-rights/govil-landing-page' },
+    { label: 'עמותה למיצוי זכויות ניצולי שואה', url: 'https://www.aviv.org.il/' },
+  ]},
+  { key: 'foreign', icon: 'public', label: 'זקוקים לעובד זר', links: [
+    { label: 'העסקת עובד זר בסיעוד', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%A2%D7%A1%D7%A7%D7%AA_%D7%A2%D7%95%D7%91%D7%93_%D7%96%D7%A8_%D7%91%D7%A1%D7%99%D7%A2%D7%95%D7%93' },
+    { label: 'העסקת עובד זר לאחר שחרור', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%A2%D7%A1%D7%A7%D7%AA_%D7%A2%D7%95%D7%91%D7%93_%D7%96%D7%A8_%D7%9C%D7%90%D7%97%D7%A8_%D7%A9%D7%97%D7%A8%D7%95%D7%A8_%D7%9E%D7%91%D7%99%D7%AA_%D7%97%D7%95%D7%9C%D7%99%D7%9D_%D7%90%D7%95_%D7%9E%D7%9E%D7%95%D7%A1%D7%93_%D7%A1%D7%99%D7%A2%D7%95%D7%93%D7%99' },
+    { label: 'טופס בקשה להעסקת עובדים זרים', url: 'https://www.gov.il/BlobFolder/generalpage/foreign_workers_application_forms/he/caregiving_permit_2021.pdf#page=7' },
+    { label: 'קבלת היתר להעסקת עובד זר', url: 'https://www.gov.il/he/service/nursing_foreign_worker' },
+    { label: 'זכויות עובד זר', url: 'https://www.gov.il/he/pages/foreign_workers_rights_booklets' },
+  ]},
+  { key: 'housing', icon: 'holiday_village', label: 'דיור תומך ופתרונות מגורים', links: [
+    { label: 'איך בוחרים דיור מוגן', url: 'https://me.health.gov.il/older-adult/services-rights/assisted-living-facilities/how-to-choose/' },
+    { label: 'זכויות הדייר במוסד גריאטרי', url: 'https://me.health.gov.il/older-adult/services-rights/assisted-living-facilities/resident-rights/' },
+    { label: 'סיוע במימון סידור מוסדי סיעודי', url: 'https://www.gov.il/he/service/assistance-in-financing-nursing-hospitalization' },
+  ]},
+  { key: 'family', icon: 'family_restroom', label: 'בני משפחה מטפלים', links: [
+    { label: 'זכויות בני משפחה מטפלים', url: 'https://me.health.gov.il/older-adult/services-rights/benefits-and-eligibilities/family-caregivers/' },
+    { label: 'שירות ייעוץ לאזרח הוותיק ובני משפחתו', url: 'https://www.btl.gov.il/benefits/counseling_for_the_elderly/pages/default.aspx' },
+  ]},
+  { key: 'eol', icon: 'favorite', label: 'לקראת סוף חיים', links: [
+    { label: 'טיפול פליאטיבי (תומך)', url: 'https://me.health.gov.il/older-adult/services-rights/before-saying-goodbye/palliative-care/about/' },
+    { label: 'טיפול בכאב', url: 'https://me.health.gov.il/older-adult/services-rights/before-saying-goodbye/palliative-care/pain-management/' },
+    { label: 'ייפוי כוח מתמשך', url: 'https://www.gov.il/he/service/edit_and_deposit_continuous_power_of_attorney' },
+    { label: 'אפוטרופסות', url: 'https://me.health.gov.il/older-adult/services-rights/before-saying-goodbye/guardianship/' },
+    { label: 'הפקדת צוואה אצל רשם הירושה', url: 'https://www.gov.il/he/service/will_deposit' },
+    { label: 'הנחיות רפואיות מקדימות', url: 'https://me.health.gov.il/older-adult/services-rights/before-saying-goodbye/advance-medical-directives/' },
+    { label: 'המתת חסד', url: 'https://me.health.gov.il/older-adult/services-rights/before-saying-goodbye/euthanasia/' },
+  ]},
+];
 
-  <script src="app.js"></script>
+const homeView = document.getElementById('homeView');
+const detailView = document.getElementById('detailView');
+const catGrid = document.getElementById('catGrid');
+const linkGrid = document.getElementById('linkGrid');
+const detailIcon = document.getElementById('detailIcon');
+const detailLabel = document.getElementById('detailLabel');
+const backBtn = document.getElementById('backBtn');
+
+CATEGORIES.forEach(cat => {
+  const btn = document.createElement('button');
+  btn.className = 'cat-card';
+  btn.innerHTML = `
+    <span style="position:absolute;top:0;bottom:0;right:0;width:5px;background:#FF2F92;display:block;"></span>
+    <span class="ms" style="font-size:30px;color:#FF2F92;min-width:34px;text-align:center;">${cat.icon}</span>
+    <span style="flex:1;font-family:Heebo;font-weight:700;font-size:20px;color:#162B4B;line-height:1.3;">${cat.label}</span>
+    <span class="ms" style="font-size:24px;color:#888;">chevron_left</span>
+  `;
+  btn.addEventListener('click', () => openCat(cat));
+  catGrid.appendChild(btn);
+});
+
+function openCat(cat) {
+  detailIcon.textContent = cat.icon;
+  detailLabel.textContent = cat.label;
+  linkGrid.innerHTML = '';
+  cat.links.forEach(link => {
+    const a = document.createElement('a');
+    a.href = link.url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.className = 'link-card';
+    a.innerHTML = `
+      <span style="flex:1;font-family:Heebo;font-weight:700;font-size:18px;color:#162B4B;line-height:1.4;">${link.label}</span>
+      <span class="ms" style="font-size:20px;color:#FF2F92;flex:none;">open_in_new</span>
+    `;
+    linkGrid.appendChild(a);
+  });
+  homeView.classList.add('hidden');
+  detailView.classList.remove('hidden');
+  window.scrollTo(0, 0);
+}
+
+backBtn.addEventListener('click', () => {
+  detailView.classList.add('hidden');
+  homeView.classList.remove('hidden');
+  window.scrollTo(0, 0);
+});
+</script>
 </body>
 </html>
