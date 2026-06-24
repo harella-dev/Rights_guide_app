@@ -41,7 +41,7 @@ body { min-height: 100vh; }
 .container {
   max-width: 480px;
   margin: 0 auto;
-  padding: 24px 16px 48px;
+  padding: 24px 16px 80px;
 }
 
 /* ─────────────────────────────────────────────
@@ -87,6 +87,13 @@ h3.section-heading {
   line-height: 1.7;
   color: var(--color-text);
   margin-bottom: 10px;
+}
+
+.intro-text p {
+  margin-bottom: 14px;
+}
+.intro-text p:last-child {
+  margin-bottom: 0;
 }
 
 .no-data-note {
@@ -408,6 +415,86 @@ h3.section-heading {
   font-size: 0.875rem;
   color: var(--color-muted);
   padding: 10px 4px;
+}
+
+/* ─────────────────────────────────────────────
+   כרטיסי קופות חולים
+───────────────────────────────────────────── */
+.fund-card {
+  margin-bottom: 12px;
+}
+.fund-card .btn {
+  margin-top: 10px;
+}
+
+/* ─────────────────────────────────────────────
+   סרגל ניווט תחתון קבוע — מדריכים
+───────────────────────────────────────────── */
+#guides-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-card);
+  border-top: 1px solid var(--color-border);
+  padding: 10px 16px;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+#guides-nav button {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: Arial, "Arial Hebrew", sans-serif;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+#guides-nav button:hover { text-decoration: underline; }
+
+.nav-sep {
+  color: var(--color-border);
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* dropdown style (reused from topic-select pattern) */
+.topic-select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: Arial, "Arial Hebrew", sans-serif;
+  background: var(--color-card);
+  color: var(--color-text);
+  direction: rtl;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 12px center;
+  padding-left: 36px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+.topic-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.intro-sub {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 12px;
 }
 
 /* ─────────────────────────────────────────────

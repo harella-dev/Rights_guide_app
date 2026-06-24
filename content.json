@@ -9,7 +9,12 @@
 
   "meta": {
     "appName": "מדריך הזכויות שלי",
-    "intro": "המדריך עוזר לכם למצוא במהירות את העמוד הרשמי המתאים לזכויות ולהטבות שמגיעות לכם — בקופת החולים, בביטוח הלאומי ובאתר כל-זכות. עונים על שלוש שאלות קצרות, ומקבלים קישור ישיר לעמוד הנכון.",
+    "intro": [
+      "קבלת אבחנה רפואית מלווה לא פעם בבלבול, שאלות והמון בירוקרטיה. האפליקציה הזו נוצרה כדי לעשות סדר. כאן תוכלו למצוא מידע על זכויות, שירותים ותהליכים הקשורים למצבכם הרפואי, ולקבל הכוונה למקורות המידע הרשמיים והעדכניים ביותר. המטרה היא לעזור לכם להבין מה הצעד הבא – ומאיפה מתחילים.",
+      "באמצעות המערכת תוכלו לאתר מידע על זכויות, הטבות ושירותים המגיעים לכם מקופות החולים, מביטוח לאומי ומגורמים נוספים, בהתאם למחלה או למצב הרפואי הרלוונטי.",
+      "כל שעליכם לעשות הוא להזין את המחלה או המצב הרפואי שמעניינים אתכם ולענות על מספר שאלות קצרות. בהתאם למידע שתספקו, המערכת תפנה אתכם לעמודים ולקישורים המתאימים שבהם תוכלו לבדוק את זכויותיכם ולקבל מידע נוסף.",
+      "באזור \"מדריכים\" תמצאו הסברים מעשיים וברורים לביצוע תהליכים בירוקרטיים נפוצים."
+    ],
     "noDataNote": "המדריך אינו אוסף ואינו שומר פרטים אישיים.",
     "disclaimerShort": "המדריך מפנה למקורות רשמיים בלבד. המידע באתר הרשמי הוא הקובע.",
     "disclaimerFull": "חשוב לדעת: המדריך מפנה למקורות רשמיים בלבד, אינו מספק את המידע הרשמי עצמו ואינו מהווה ייעוץ. הזכויות והתנאים עשויים להשתנות — יש לבדוק תמיד באתר הרשמי המעודכן, שהוא המקור הקובע."
@@ -47,6 +52,89 @@
     "bituachLeumiGeneral": { "label": "ביטוח לאומי – כל הזכויות", "desc": "מנוע הזכויות הרשמי של המוסד לביטוח לאומי, לפי מצב אישי.", "url": "https://www.btl.gov.il/allrights/Pages/default.aspx" },
     "kolzchutGeneral": { "label": "כל-זכות – זכויות מהביטוח הלאומי", "desc": "מדריך מפורט לזכויות מול הביטוח הלאומי באתר כל-זכות.", "url": "https://www.kolzchut.org.il/he/%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%9E%D7%94%D7%9E%D7%95%D7%A1%D7%93_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99" }
   },
+
+  "navigation": {
+    "q1Label": "מה מעניין אותך?",
+    "options": [
+      { "id": "funds",   "label": "זכויות בקופות החולים",       "action": "screen" },
+      { "id": "bituach", "label": "זכויות וקצבאות ביטוח לאומי", "action": "link",
+        "url": "https://www.btl.gov.il/Events/Pages/EventPegia.aspx" },
+      { "id": "medical", "label": "זכויות לפי מצב רפואי",       "action": "screen" }
+    ],
+    "medicalOptions": [
+      { "label": "בריאות ומחלות",   "action": "screen" },
+      { "label": "זכויות בריאות כללית",
+        "action": "link",
+        "url": "https://www.kolzchut.org.il/he/%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9B%D7%9C%D7%9C%D7%99%D7%95%D7%AA" },
+      { "label": "מיצוי זכויות לאזרחים ותיקים",
+        "action": "link",
+        "url": "https://www.gov.il/he/service/units-sgula" }
+    ]
+  },
+
+  "diseases": [
+    { "label": "אוטיזם",                                           "url": "https://www.kolzchut.org.il/he/%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9C_%D7%A8%D7%A6%D7%A3_%D7%94%D7%90%D7%95%D7%98%D7%99%D7%96%D7%9D" },
+    { "label": "אוטיזם קלאסי (לפני גיל 3)",                       "url": "https://www.kolzchut.org.il/he/%D7%90%D7%95%D7%98%D7%99%D7%96%D7%9D_%D7%A7%D7%9C%D7%90%D7%A1%D7%99" },
+    { "label": "אוסטאופורוזיס (דלדול עצם)",                        "url": "https://www.kolzchut.org.il/he/%D7%90%D7%95%D7%A1%D7%98%D7%90%D7%95%D7%A4%D7%95%D7%A8%D7%95%D7%96%D7%99%D7%A1_(%D7%93%D7%9C%D7%93%D7%95%D7%9C_%D7%94%D7%A2%D7%A6%D7%9D)" },
+    { "label": "אטקסיה טלנגיאקטזיה (AT)",                          "url": "https://www.kolzchut.org.il/he/%D7%90%D7%98%D7%A7%D7%A1%D7%99%D7%94_%D7%98%D7%9C%D7%A0%D7%92%D7%99%D7%90%D7%A7%D7%98%D7%96%D7%99%D7%94_(AT)" },
+    { "label": "איידס",                                             "url": "https://www.kolzchut.org.il/he/%D7%90%D7%99%D7%99%D7%93%D7%A1_(%D7%AA%D7%A1%D7%9E%D7%95%D7%A0%D7%AA_%D7%94%D7%9B%D7%A9%D7%9C_%D7%94%D7%97%D7%99%D7%A1%D7%95%D7%A0%D7%99_%D7%94%D7%A0%D7%A8%D7%9B%D7%A9)" },
+    { "label": "אינטרסקס (התמיינות מינית אחרת)",                   "url": "https://www.kolzchut.org.il/he/%D7%96%D7%9B%D7%95%D7%AA%D7%95%D7%9F_%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%94%D7%AA%D7%9E%D7%99%D7%99%D7%A0%D7%95%D7%AA_%D7%9E%D7%99%D7%A0%D7%99%D7%AA_%D7%90%D7%97%D7%A8%D7%AA_(%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A1%D7%A7%D7%A1)" },
+    { "label": "אלופציה אראטה",                                    "url": "https://www.kolzchut.org.il/he/%D7%90%D7%9C%D7%95%D7%A4%D7%A6%D7%99%D7%94_%D7%90%D7%A8%D7%90%D7%98%D7%94" },
+    { "label": "אנשים במצב סיעודי",                                "url": "https://www.kolzchut.org.il/he/%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%91%D7%9E%D7%A6%D7%91_%D7%A1%D7%99%D7%A2%D7%95%D7%93%D7%99" },
+    { "label": "אסתמה",                                            "url": "https://www.kolzchut.org.il/he/%D7%90%D7%A1%D7%AA%D7%9E%D7%94_(%D7%92%D7%A0%D7%97%D7%AA_%D7%94%D7%A1%D7%99%D7%9E%D7%A4%D7%95%D7%A0%D7%95%D7%AA)" },
+    { "label": "אסתמה של העור (דלקת עור אטופית, אטופיק דרמטיטיס)", "url": "https://www.kolzchut.org.il/he/%D7%90%D7%98%D7%95%D7%A4%D7%99%D7%A7_%D7%93%D7%A8%D7%9E%D7%98%D7%99%D7%98%D7%99%D7%A1_(%D7%90%D7%A1%D7%98%D7%9E%D7%94_%D7%A9%D7%9C_%D7%94%D7%A2%D7%95%D7%A8)" },
+    { "label": "אפילפסיה",                                         "url": "https://www.kolzchut.org.il/he/%D7%90%D7%A4%D7%99%D7%9C%D7%A4%D7%A1%D7%99%D7%94" },
+    { "label": "ארוע מוחי / שבץ מוחי",                            "url": "https://www.kolzchut.org.il/he/%D7%90%D7%99%D7%A8%D7%95%D7%A2_%D7%9E%D7%95%D7%97%D7%99_(%D7%A9%D7%91%D7%A5_%D7%9E%D7%95%D7%97%D7%99,_CVA)" },
+    { "label": "בריאות בגיל השלישי",                               "url": "https://www.kolzchut.org.il/he/%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%91%D7%92%D7%99%D7%9C_%D7%94%D7%A9%D7%9C%D7%99%D7%A9%D7%99" },
+    { "label": "בריאות ילדים ונוער",                               "url": "https://www.kolzchut.org.il/he/%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%99%D7%9C%D7%93%D7%99%D7%9D_%D7%95%D7%A0%D7%95%D7%A2%D7%A8" },
+    { "label": "גושה",                                             "url": "https://www.kolzchut.org.il/he/%D7%92%D7%95%D7%A9%D7%94" },
+    { "label": "גזזת",                                             "url": "https://www.kolzchut.org.il/he/%D7%92%D7%96%D7%96%D7%AA" },
+    { "label": "דושן",                                             "url": "https://www.kolzchut.org.il/he/%D7%93%D7%95%D7%A9%D7%9F" },
+    { "label": "דיכאון",                                           "url": "https://www.kolzchut.org.il/he/%D7%93%D7%99%D7%9B%D7%90%D7%95%D7%9F" },
+    { "label": "דיסאוטונומיה משפחתית",                             "url": "https://www.kolzchut.org.il/he/%D7%93%D7%99%D7%A1%D7%90%D7%95%D7%98%D7%95%D7%A0%D7%95%D7%9E%D7%99%D7%94_%D7%9E%D7%A9%D7%A4%D7%97%D7%AA%D7%99%D7%AA_(FD)" },
+    { "label": "דיסגרפיה",                                         "url": "https://www.kolzchut.org.il/he/%D7%93%D7%99%D7%A1%D7%92%D7%A8%D7%A4%D7%99%D7%94" },
+    { "label": "דיסלקציה",                                         "url": "https://www.kolzchut.org.il/he/%D7%93%D7%99%D7%A1%D7%9C%D7%A7%D7%A6%D7%99%D7%94" },
+    { "label": "המופיליה",                                         "url": "https://www.kolzchut.org.il/he/%D7%94%D7%9E%D7%95%D7%A4%D7%99%D7%9C%D7%99%D7%94" },
+    { "label": "הנטינגטון",                                        "url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%98%D7%99%D7%A0%D7%92%D7%98%D7%95%D7%9F" },
+    { "label": "הפרעות אכילה",                                     "url": "https://www.kolzchut.org.il/he/%D7%94%D7%A4%D7%A8%D7%A2%D7%95%D7%AA_%D7%90%D7%9B%D7%99%D7%9C%D7%94_(%D7%90%D7%A0%D7%95%D7%A8%D7%A7%D7%A1%D7%99%D7%94,_%D7%91%D7%95%D7%9C%D7%99%D7%9E%D7%99%D7%94,_%D7%90%D7%9B%D7%99%D7%9C%D7%94_%D7%9B%D7%A4%D7%99%D7%99%D7%AA%D7%99%D7%AA)" },
+    { "label": "הפרעות קשב ולקויות למידה",                         "url": "https://www.kolzchut.org.il/he/%D7%9C%D7%A7%D7%95%D7%99%D7%95%D7%AA_%D7%9C%D7%9E%D7%99%D7%93%D7%94_%D7%95%D7%94%D7%A4%D7%A8%D7%A2%D7%AA_%D7%A7%D7%A9%D7%91_%D7%95%D7%A4%D7%A2%D7%9C%D7%AA%D7%A0%D7%95%D7%AA_%D7%99%D7%AA%D7%A8" },
+    { "label": "הריון ולידה",                                      "url": "https://www.kolzchut.org.il/he/%D7%94%D7%99%D7%A8%D7%99%D7%95%D7%9F_%D7%95%D7%9C%D7%99%D7%93%D7%94" },
+    { "label": "השמנה",                                            "url": "https://www.kolzchut.org.il/he/%D7%94%D7%A9%D7%9E%D7%A0%D7%94_%D7%95%D7%94%D7%A9%D7%9E%D7%A0%D7%AA_%D7%99%D7%AA%D7%A8" },
+    { "label": "טטנוס",                                            "url": "https://www.kolzchut.org.il/he/%D7%98%D7%98%D7%A0%D7%95%D7%A1_(%D7%A6%D7%A4%D7%93%D7%AA)" },
+    { "label": "טיפולי פוריות",                                    "url": "https://www.kolzchut.org.il/he/%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99_%D7%A4%D7%95%D7%A8%D7%99%D7%95%D7%AA" },
+    { "label": "טיפולי שיניים",                                    "url": "https://www.kolzchut.org.il/he/%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99_%D7%A9%D7%99%D7%A0%D7%99%D7%99%D7%9D" },
+    { "label": "טרשת נפוצה",                                       "url": "https://www.kolzchut.org.il/he/%D7%98%D7%A8%D7%A9%D7%AA_%D7%A0%D7%A4%D7%95%D7%A6%D7%94" },
+    { "label": "יתר לחץ דם ריאתי",                                 "url": "https://www.kolzchut.org.il/he/%D7%99%D7%AA%D7%A8_%D7%9C%D7%97%D7%A5_%D7%93%D7%9D_%D7%A8%D7%99%D7%90%D7%AA%D7%99" },
+    { "label": "כובד שמיעה",                                       "url": "https://www.kolzchut.org.il/he/%D7%97%D7%99%D7%A8%D7%A9%D7%99%D7%9D_%D7%95%D7%9B%D7%91%D7%93%D7%99_%D7%A9%D7%9E%D7%99%D7%A2%D7%94" },
+    { "label": "לב",                                               "url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%9C%D7%99_%D7%9C%D7%91" },
+    { "label": "מוגבלות שכלית התפתחותית",                          "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA_%D7%A9%D7%9B%D7%9C%D7%99%D7%AA_%D7%94%D7%AA%D7%A4%D7%AA%D7%97%D7%95%D7%AA%D7%99%D7%AA" },
+    { "label": "מחלות כליה ודיאליזה",                              "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%9B%D7%9C%D7%99%D7%94_%D7%95%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99_%D7%93%D7%99%D7%90%D7%9C%D7%99%D7%96%D7%94" },
+    { "label": "מחלות נוירולוגיות",                                "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%A0%D7%95%D7%99%D7%A8%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%95%D7%AA" },
+    { "label": "מחלות ראומטיות (כללי)",                            "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%95%D7%AA" },
+    { "label": "מתמודדי נפש",                                      "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%AA%D7%9E%D7%95%D7%93%D7%93%D7%99_%D7%A0%D7%A4%D7%A9" },
+    { "label": "נפגעי הרעלה",                                      "url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%9C%D7%99%D7%9D_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%94%D7%A8%D7%A2%D7%9C%D7%94" },
+    { "label": "נפגעי קרינה",                                      "url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%9C%D7%99%D7%9D_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%A7%D7%A8%D7%99%D7%A0%D7%94" },
+    { "label": "סוכרת",                                            "url": "https://www.kolzchut.org.il/he/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA" },
+    { "label": "סוכרת נעורים",                                     "url": "https://www.kolzchut.org.il/he/%D7%A1%D7%95%D7%9B%D7%A8%D7%AA_%D7%A0%D7%A2%D7%95%D7%A8%D7%99%D7%9D" },
+    { "label": "סוף החיים",                                        "url": "https://www.kolzchut.org.il/he/%D7%A1%D7%95%D7%A3_%D7%94%D7%97%D7%99%D7%99%D7%9D" },
+    { "label": "סיסטיק פיברוזיס",                                  "url": "https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%A1%D7%98%D7%99%D7%A7_%D7%A4%D7%99%D7%91%D7%A8%D7%95%D7%96%D7%99%D7%A1_(CF)" },
+    { "label": "סרטן",                                             "url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%9C%D7%99_%D7%A1%D7%A8%D7%98%D7%9F" },
+    { "label": "עיוורים ולקויי ראייה",                             "url": "https://www.kolzchut.org.il/he/%D7%A2%D7%99%D7%95%D7%95%D7%A8%D7%99%D7%9D_%D7%95%D7%9C%D7%A7%D7%95%D7%99%D7%99_%D7%A8%D7%90%D7%99%D7%99%D7%94" },
+    { "label": "פגים",                                             "url": "https://www.kolzchut.org.il/he/%D7%A4%D7%92%D7%99%D7%9D" },
+    { "label": "פוליו (שיתוק ילדים)",                              "url": "https://www.kolzchut.org.il/he/%D7%A4%D7%95%D7%9C%D7%99%D7%95_-_%D7%A9%D7%99%D7%AA%D7%95%D7%A7_%D7%99%D7%9C%D7%93%D7%99%D7%9D" },
+    { "label": "פומפה",                                            "url": "https://www.kolzchut.org.il/he/%D7%A4%D7%95%D7%9E%D7%A4%D7%94" },
+    { "label": "פיברומיאלגיה",                                     "url": "https://www.kolzchut.org.il/he/%D7%A4%D7%99%D7%91%D7%A8%D7%95%D7%9E%D7%99%D7%90%D7%9C%D7%92%D7%99%D7%94_(%D7%93%D7%90%D7%91%D7%AA_%D7%94%D7%A9%D7%A8%D7%99%D7%A8%D7%99%D7%9D)" },
+    { "label": "צליאק",                                            "url": "https://www.kolzchut.org.il/he/%D7%A6%D7%9C%D7%99%D7%90%D7%A7" },
+    { "label": "קוליטיס כיבית",                                    "url": "https://www.kolzchut.org.il/he/%D7%A7%D7%95%D7%9C%D7%99%D7%98%D7%99%D7%A1_%D7%9B%D7%99%D7%91%D7%99%D7%AA" },
+    { "label": "קלאב פוט",                                        "url": "https://www.kolzchut.org.il/he/%D7%A7%D7%9C%D7%90%D7%91_%D7%A4%D7%95%D7%98_(%D7%A8%D7%92%D7%9C_%D7%A7%D7%9C%D7%95%D7%98%D7%94/%D7%A1%D7%95%D7%A1%D7%A0%D7%99%D7%AA/%D7%A7%D7%9C%D7%95%D7%91%D7%94)" },
+    { "label": "קרוהן",                                            "url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%95%D7%94%D7%9F" },
+    { "label": "שחפת",                                             "url": "https://www.kolzchut.org.il/he/%D7%A9%D7%97%D7%A4%D7%AA" },
+    { "label": "שיתוק מוחין",                                      "url": "https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%AA%D7%95%D7%A7_%D7%9E%D7%95%D7%97%D7%99%D7%9F_(CP)" },
+    { "label": "תסמונת אנגלמן",                                    "url": "https://www.kolzchut.org.il/he/%D7%AA%D7%A1%D7%9E%D7%95%D7%A0%D7%AA_%D7%90%D7%A0%D7%92%D7%9C%D7%9E%D7%9F" },
+    { "label": "תסמונת טורט",                                      "url": "https://www.kolzchut.org.il/he/%D7%AA%D7%A1%D7%9E%D7%95%D7%A0%D7%AA_%D7%98%D7%95%D7%A8%D7%98" },
+    { "label": "תסמונת רט",                                        "url": "https://www.kolzchut.org.il/he/%D7%AA%D7%A1%D7%9E%D7%95%D7%A0%D7%AA_%D7%A8%D7%98" },
+    { "label": "PTSD",                                              "url": "https://www.kolzchut.org.il/he/%D7%94%D7%A4%D7%A8%D7%A2%D7%AA_%D7%93%D7%97%D7%A7_%D7%A4%D7%95%D7%A1%D7%98_%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%AA%D7%99%D7%AA_(PTSD)" }
+  ],
 
   "groups": ["מצב חיים", "אונקולוגיה", "סוכרת ומטבולי", "לב וכלי דם", "מערכת הנשימה", "נוירולוגיה", "אוטואימוני / ראומטי / מעי", "בריאות הנפש", "כליה ודם"],
 
