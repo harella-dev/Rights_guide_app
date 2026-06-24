@@ -73,7 +73,7 @@
       <p style="font-family:'Gveret Levin', cursive; font-size:clamp(26px,4vw,38px); color:#0096FF; margin:0; line-height:1.2; display:inline-block; margin-top:-4px;">במקום אחד</p>
     </div>
     <div style="background:#F5F5F5; border-radius:14px; padding:26px 28px;">
-      <p style="font-family:Heebo; font-weight:500; font-size:19px; line-height:1.75; color:#162B4B; margin:0; text-align:right;">כשמתמודדים עם מצב רפואי, קל להרגיש מוצפים ממידע, טפסים והחלטות. פורטל עוגן נועד להיות נקודת אחיזה פשוטה וברורה בדרך. כאן אפשר למצוא קישורים רשמיים, עדכניים ושימושיים למידע שחשוב להכיר, כדי לקבל תמונה ברורה יותר של האפשרויות העומדות על הפרק. כל מה שצריך לעשות הוא לבחור את הנושא המבוקש, להקליק עליו ולהגיע לאתרים הרלוונטיים — בלי חיפושים מיותרים ובלי ללכת לאיבוד בדרך.</p>
+      <p style="font-family:Heebo; font-weight:500; font-size:19px; line-height:1.75; color:#162B4B; margin:0; text-align:right;">כשמתמודדים עם מצב רפואי, קל להרגיש מוצפים במידע והחלטות, ומצד שני, לא תמיד יודע ״מה מגיע לי?״. פורטל עוגן נועד להיות נקודת אחיזה פשוטה וברורה בדרך. כאן אפשר למצוא קישורים רשמיים, עדכניים ושימושיים למידע שחשוב להכיר, כדי לקבל תמונה ברורה יותר של האפשרויות העומדות על הפרק. כל מה שצריך לעשות הוא לבחור את הנושא המבוקש, להקליק עליו ולהגיע לאתרים הרלוונטיים — בלי חיפושים מיותרים ובלי ללכת לאיבוד בדרך.</p>
     </div>
   </section>
 
@@ -89,6 +89,7 @@
         <span style="flex:1; font-family:Heebo; font-weight:800; font-size:22px; color:#162B4B; line-height:1.25; letter-spacing:-0.01em; text-align:right;">זכויות ושירותים לגיל הזהב בקופ״ח</span>
         <span class="ms" style="font-size:30px; color:#FF2F92; min-width:32px; text-align:center;">health_and_safety</span>
       </div>
+      <p style="font-family:Heebo; font-weight:500; font-size:16px; color:#555; margin:0 0 14px; text-align:right;">לכל קופה שירותים שונים המיועדים לבני ובנות גיל הזהב</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;">
         <a href="https://www.clalit.co.il/he/myrights/senior/Pages/default.aspx" target="_blank" rel="noopener" class="hmo-card">
           <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">כללית</span>
@@ -118,6 +119,7 @@
         <span style="flex:1; font-family:Heebo; font-weight:800; font-size:22px; color:#162B4B; line-height:1.25; letter-spacing:-0.01em; text-align:right;">שירותי רפואה בלי לצאת מהבית</span>
         <span class="ms" style="font-size:30px; color:#FF2F92; min-width:32px; text-align:center;">home_health</span>
       </div>
+      <p style="font-family:Heebo; font-weight:500; font-size:16px; color:#555; margin:0 0 14px; text-align:right;">קיימים מרכזים רפואיים ובתי חולים המעניקים שירותים רפואיים מרחוק או בבית המטופלים</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;">
         <a href="https://www.tasmc.org.il/service-info/service-info/telemedicine/" target="_blank" rel="noopener" class="hmo-card">
           <span style="font-family:Heebo; font-weight:700; font-size:18px; color:#162B4B;">איכילוב</span>
@@ -181,7 +183,7 @@
 
 <script>
 const CATEGORIES = [
-  { key: 'hospitalization', icon: 'festival', label: 'לקראת אשפוז', links: [
+  { key: 'hospitalization', icon: 'festival', label: 'אני לקראת אשפוז בבית חולים', links: [
     { label: 'מתי מתאים להתאשפז בבית', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/home-hospitalization/when-to-choose/' },
     { label: 'איך בוחרים בית חולים', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/hospitals/choosing-a-hospital/' },
     { label: 'חיפוש מוסד סיעודי', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/nursing-hospitalization/nursing-facility-finder/' },
@@ -197,7 +199,7 @@ const CATEGORIES = [
     { label: 'גמלת סיעוד בזמן אשפוז', url: 'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%A1%D7%99%D7%A2%D7%95%D7%93_%D7%91%D7%96%D7%9E%D7%9F_%D7%90%D7%A9%D7%A4%D7%95%D7%96_%D7%91%D7%91%D7%99%D7%AA_%D7%97%D7%95%D7%9C%D7%99%D7%9D' },
     { label: 'שיקום בעת אשפוז', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%91%D7%9E%D7%A1%D7%92%D7%A8%D7%AA_%D7%90%D7%A9%D7%A4%D7%95%D7%96_%D7%9C%D7%97%D7%95%D7%9C%D7%94_%D7%A9%D7%99%D7%A7%D7%95%D7%9E%D7%99' },
   ]},
-  { key: 'discharge', icon: 'door_open', label: 'שחרור מאשפוז', links: [
+  { key: 'discharge', icon: 'door_open', label: 'אני לקראת שחרור מבית החולים', links: [
     { label: 'שיקום בקהילה או בבית', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%91%D7%A7%D7%94%D7%99%D7%9C%D7%94_%D7%90%D7%95_%D7%91%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%95%D7%9C%D7%94_%D7%A9%D7%99%D7%A7%D7%95%D7%9E%D7%99' },
     { label: 'סיוע בהתאמת תנאי דיור לאנשים מוגבלים בניידות', url: 'https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%95%D7%A2_%D7%91%D7%94%D7%AA%D7%90%D7%9E%D7%AA_%D7%AA%D7%A0%D7%90%D7%99_%D7%93%D7%99%D7%95%D7%A8_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%94%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%99%D7%9D_%D7%91%D7%A0%D7%99%D7%99%D7%93%D7%95%D7%AA' },
     { label: 'השאלת ציוד רפואי', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%A9%D7%90%D7%9C%D7%AA_%D7%A6%D7%99%D7%95%D7%93_%D7%A8%D7%A4%D7%95%D7%90%D7%99_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%95%D7%9C%D7%A7%D7%A9%D7%99%D7%A9%D7%99%D7%9D' },
@@ -206,27 +208,26 @@ const CATEGORIES = [
     { label: 'טיפול ביתי תומך (פליאטיבי)', url: 'https://www.kolzchut.org.il/he/%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%91%D7%99%D7%AA%D7%99_%D7%AA%D7%95%D7%9E%D7%9A_(%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%A4%D7%9C%D7%99%D7%90%D7%98%D7%99%D7%91%D7%99)' },
     { label: 'שיקום רפואי לקשישים', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%A8%D7%A4%D7%95%D7%90%D7%99_%D7%9C%D7%A7%D7%A9%D7%99%D7%A9%D7%99%D7%9D' },
   ]},
-  { key: 'rights', icon: 'gavel', label: 'זכויות בריאותיות וסיעוד', links: [
-    { label: 'מיצוי זכויות עבור מצבים שונים', url: 'https://www.kolsherut.org.il/health/understand_government_programs' },
+  { key: 'rights', icon: 'gavel', label: 'סיעוד – סיוע פיזי ואישי כשסובלים ממחלה או מוגבלות', links: [
     { label: 'נותני שירותים בסיעוד לפי יישוב', url: 'https://www.btl.gov.il/Simulators/SiudCalculators/Pages/IturNotneySherutim.aspx' },
     { label: 'תנאי זכאות לגמלת סיעוד', url: 'https://www.btl.gov.il/benefits/Long_Term_Care/Pages/zakaut.aspx' },
     { label: 'תהליך קבלת גמלת סיעוד', url: 'https://www.btl.gov.il/BENEFITS/LONG_TERM_CARE/Pages/default.aspx' },
   ]},
-  { key: 'neuro', icon: 'psychology', label: 'מחלות נוירולוגיות וקוגניטיביות', links: [
+  { key: 'neuro', icon: 'psychology', label: 'מחלות שפוגעות במערכת העצבים, בזיכרון או בחשיבה', links: [
     { label: 'מחלות נוירולוגיות', url: 'https://www.kolzchut.org.il/he/%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%A0%D7%95%D7%99%D7%A8%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%95%D7%AA' },
     { label: 'אירוע מוחי / שבץ מוחי', url: 'https://www.kolzchut.org.il/he/%D7%90%D7%99%D7%A8%D7%95%D7%A2_%D7%9E%D7%95%D7%97%D7%99_(%D7%A9%D7%91%D7%A5_%D7%9E%D7%95%D7%97%D7%99,_CVA)' },
     { label: 'אבחון דמנציה ואלצהיימר', url: 'https://me.health.gov.il/older-adult/keep-me-healthy/common-conditions/dementia-and-alzheimer/diagnosis/diagnosis/' },
     { label: 'זכויות במקרה של דמנציה', url: 'https://www.kolzchut.org.il/he/%D7%90%D7%9C%D7%A6%D7%94%D7%99%D7%99%D7%9E%D7%A8_%D7%95%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%93%D7%9E%D7%A0%D7%A6%D7%99%D7%94' },
   ]},
-  { key: 'meds', icon: 'medication', label: 'תרופות', links: [
-    { label: 'נטילת תרופות בצום', url: 'https://www.gov.il/he/pages/medications-while-fasting' },
-    { label: 'בירור מלאי תרופות בבית מרקחת', url: 'https://www.gov.il/he/pages/drug-inventory-pharmacy' },
+  { key: 'meds', icon: 'medication', label: 'תרופות – איך ואיפה רוכשים את התרופה, הזמנת תרופות הביתה, זכויות ועוד', links: [
+    { label: 'איך לוקחים תרופה בזמן צום', url: 'https://www.gov.il/he/pages/medications-while-fasting' },
+    { label: 'האם התרופה שלי זמינה בבית המרקחת של הקופה?', url: 'https://www.gov.il/he/pages/drug-inventory-pharmacy' },
     { label: '״חברים לרפואה״ — עמותה להנגשת תרופות', url: 'https://www.haverim.org.il/' },
-    { label: 'מאגר עלוני תרופות', url: 'https://israeldrugs.health.gov.il/#!/byDrug' },
+    { label: 'הוראות ללקיחת התרופה שלך – מאגר עלונים לצרכן', url: 'https://israeldrugs.health.gov.il/#!/byDrug' },
     { label: 'הזמנת תרופות הביתה לפי קופה', url: 'https://call.gov.il/product-page/10056613' },
-    { label: 'זכויות הזמנת תרופות הביתה', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%96%D7%9E%D7%A0%D7%AA_%D7%95%D7%9E%D7%A9%D7%9C%D7%95%D7%97_%D7%AA%D7%A8%D7%95%D7%A4%D7%95%D7%AA_%D7%A2%D7%93_%D7%94%D7%91%D7%99%D7%AA_%D7%9E%D7%A7%D7%95%D7%A4%D7%95%D7%AA_%D7%94%D7%97%D7%95%D7%9C%D7%99' },
   ]},
-  { key: 'benefits', icon: 'payments', label: 'זכויות, קצבאות והטבות', links: [
+  { key: 'benefits', icon: 'payments', label: 'זכויות, הטבות וקצבאות', links: [
+    { label: 'מיצוי זכויות במצבים שונים', url: 'https://www.kolsherut.org.il/health/understand_government_programs' },
     { label: 'קצבת זקנה', url: 'https://www.btl.gov.il/benefits/old_age/Pages/default.aspx' },
     { label: 'קצבת שאירים', url: 'https://www.btl.gov.il/benefits/survivors_%20insurance/pages/default.aspx' },
     { label: 'הנחות בארנונה', url: 'https://www.gov.il/he/pages/tax?chapterindex=2' },
@@ -257,6 +258,7 @@ const CATEGORIES = [
     { label: 'שירות ייעוץ לאזרח הוותיק ובני משפחתו', url: 'https://www.btl.gov.il/benefits/counseling_for_the_elderly/pages/default.aspx' },
   ]},
   { key: 'eol', icon: 'favorite', label: 'לקראת סוף חיים', links: [
+    { label: 'היערכות מוקדמת לסוף החיים', url: 'https://www.gov.il/he/pages/demise-guide' },
     { label: 'טיפול פליאטיבי (תומך)', url: 'https://me.health.gov.il/older-adult/services-rights/before-saying-goodbye/palliative-care/about/' },
     { label: 'טיפול בכאב', url: 'https://me.health.gov.il/older-adult/services-rights/before-saying-goodbye/palliative-care/pain-management/' },
     { label: 'ייפוי כוח מתמשך', url: 'https://www.gov.il/he/service/edit_and_deposit_continuous_power_of_attorney' },
