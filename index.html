@@ -73,7 +73,7 @@
       <p style="font-family:'Gveret Levin', cursive; font-size:clamp(26px,4vw,38px); color:#0096FF; margin:0; line-height:1.2; display:inline-block; margin-top:-4px;">במקום אחד</p>
     </div>
     <div style="background:#F5F5F5; border-radius:14px; padding:26px 28px;">
-      <p style="font-family:Heebo; font-weight:500; font-size:19px; line-height:1.75; color:#162B4B; margin:0; text-align:right;">כשמתמודדים עם מצב רפואי, קל להרגיש מוצפים במידע והחלטות, ומצד שני, לא תמיד יודע ״מה מגיע לי?״. פורטל עוגן נועד להיות נקודת אחיזה פשוטה וברורה בדרך. כאן אפשר למצוא קישורים רשמיים, עדכניים ושימושיים למידע שחשוב להכיר, כדי לקבל תמונה ברורה יותר של האפשרויות העומדות על הפרק. כל מה שצריך לעשות הוא לבחור את הנושא המבוקש, להקליק עליו ולהגיע לאתרים הרלוונטיים — בלי חיפושים מיותרים ובלי ללכת לאיבוד בדרך.</p>
+      <p style="font-family:Heebo; font-weight:500; font-size:19px; line-height:1.75; color:#162B4B; margin:0; text-align:right;">כשמתמודדים עם מצב רפואי, קל להרגיש מוצפים במידע, בבירוקרטיה ובהחלטות שצריך לקבל. לא תמיד ברור לאן לפנות, מה מגיע לך ואיפה למצוא מידע שאפשר לסמוך עליו.<br><br>פורטל עוגן נועד להיות נקודת אחיזה פשוטה וברורה בדרך. כאן אפשר למצוא קישורים רשמיים, עדכניים ושימושיים למידע שחשוב להכיר, כדי לקבל תמונה ברורה יותר של האפשרויות העומדות לרשותך.<br><br>כל מה שצריך לעשות הוא לבחור את הנושא המבוקש, להקליק עליו ולהגיע ישירות למידע הרלוונטי — בלי חיפושים מיותרים ובלי ללכת לאיבוד בדרך.</p>
     </div>
   </section>
 
@@ -183,7 +183,7 @@
 
 <script>
 const CATEGORIES = [
-  { key: 'hospitalization', icon: 'festival', label: 'אני לקראת אשפוז בבית חולים', links: [
+  { key: 'hospitalization', icon: 'festival', label: 'מידע שימושי לפני אשפוז בבית חולים', links: [
     { label: 'מתי מתאים להתאשפז בבית', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/home-hospitalization/when-to-choose/' },
     { label: 'איך בוחרים בית חולים', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/hospitals/choosing-a-hospital/' },
     { label: 'חיפוש מוסד סיעודי', url: 'https://me.health.gov.il/older-adult/services-rights/hospitalization/nursing-hospitalization/nursing-facility-finder/' },
@@ -199,7 +199,7 @@ const CATEGORIES = [
     { label: 'גמלת סיעוד בזמן אשפוז', url: 'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%A1%D7%99%D7%A2%D7%95%D7%93_%D7%91%D7%96%D7%9E%D7%9F_%D7%90%D7%A9%D7%A4%D7%95%D7%96_%D7%91%D7%91%D7%99%D7%AA_%D7%97%D7%95%D7%9C%D7%99%D7%9D' },
     { label: 'שיקום בעת אשפוז', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%91%D7%9E%D7%A1%D7%92%D7%A8%D7%AA_%D7%90%D7%A9%D7%A4%D7%95%D7%96_%D7%9C%D7%97%D7%95%D7%9C%D7%94_%D7%A9%D7%99%D7%A7%D7%95%D7%9E%D7%99' },
   ]},
-  { key: 'discharge', icon: 'door_open', label: 'אני לקראת שחרור מבית החולים', links: [
+  { key: 'discharge', icon: 'door_open', label: 'מידע שימושי לאחר שחרור מבית חולים', links: [
     { label: 'שיקום בקהילה או בבית', url: 'https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%91%D7%A7%D7%94%D7%99%D7%9C%D7%94_%D7%90%D7%95_%D7%91%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%95%D7%9C%D7%94_%D7%A9%D7%99%D7%A7%D7%95%D7%9E%D7%99' },
     { label: 'סיוע בהתאמת תנאי דיור לאנשים מוגבלים בניידות', url: 'https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%95%D7%A2_%D7%91%D7%94%D7%AA%D7%90%D7%9E%D7%AA_%D7%AA%D7%A0%D7%90%D7%99_%D7%93%D7%99%D7%95%D7%A8_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%94%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%99%D7%9D_%D7%91%D7%A0%D7%99%D7%99%D7%93%D7%95%D7%AA' },
     { label: 'השאלת ציוד רפואי', url: 'https://www.kolzchut.org.il/he/%D7%94%D7%A9%D7%90%D7%9C%D7%AA_%D7%A6%D7%99%D7%95%D7%93_%D7%A8%D7%A4%D7%95%D7%90%D7%99_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%95%D7%9C%D7%A7%D7%A9%D7%99%D7%A9%D7%99%D7%9D' },
@@ -219,12 +219,12 @@ const CATEGORIES = [
     { label: 'אבחון דמנציה ואלצהיימר', url: 'https://me.health.gov.il/older-adult/keep-me-healthy/common-conditions/dementia-and-alzheimer/diagnosis/diagnosis/' },
     { label: 'זכויות במקרה של דמנציה', url: 'https://www.kolzchut.org.il/he/%D7%90%D7%9C%D7%A6%D7%94%D7%99%D7%99%D7%9E%D7%A8_%D7%95%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%93%D7%9E%D7%A0%D7%A6%D7%99%D7%94' },
   ]},
-  { key: 'meds', icon: 'medication', label: 'תרופות – איך ואיפה רוכשים את התרופה, הזמנת תרופות הביתה, זכויות ועוד', links: [
+  { key: 'meds', icon: 'medication', label: 'איפה רוכשים את התרופה? איך לוקחים אותה?', links: [
     { label: 'איך לוקחים תרופה בזמן צום', url: 'https://www.gov.il/he/pages/medications-while-fasting' },
     { label: 'האם התרופה שלי זמינה בבית המרקחת של הקופה?', url: 'https://www.gov.il/he/pages/drug-inventory-pharmacy' },
-    { label: '״חברים לרפואה״ — עמותה להנגשת תרופות', url: 'https://www.haverim.org.il/' },
     { label: 'הוראות ללקיחת התרופה שלך – מאגר עלונים לצרכן', url: 'https://israeldrugs.health.gov.il/#!/byDrug' },
     { label: 'הזמנת תרופות הביתה לפי קופה', url: 'https://call.gov.il/product-page/10056613' },
+    { label: '״חברים לרפואה״ — עמותה להנגשת תרופות', url: 'https://www.haverim.org.il/' },
   ]},
   { key: 'benefits', icon: 'payments', label: 'זכויות, הטבות וקצבאות', links: [
     { label: 'מיצוי זכויות במצבים שונים', url: 'https://www.kolsherut.org.il/health/understand_government_programs' },
